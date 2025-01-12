@@ -16,3 +16,12 @@
         # to run it
         ./kube-bench --config-dir `pwd`/cfg --config `pwd`/cfg/config.yaml 
         ```
+
+- Auth
+  - Types of Auth:
+    -  Static Password Files
+       -  CSV file with Users, Pass and Groups
+    -  Static Token Files
+       -  CSV file with Tokens
+    -  Cerficiates
+    -  Indentity Services
