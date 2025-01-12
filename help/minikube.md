@@ -6,3 +6,5 @@
   - `minikube pause`
 - Add a worker Node:
   - `minikube node add --worker`
+- Delete all:
+  - `minikube delete --all`
