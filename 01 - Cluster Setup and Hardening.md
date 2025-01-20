@@ -24,4 +24,24 @@
     -  Static Token Files
        -  CSV file with Tokens
     -  Cerficiates
+       -  <https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/>
     -  Indentity Services
+    - With Bootstrap token Secrets:
+      - <https://kubernetes.io/docs/concepts/configuration/secret/#bootstrap-token-secrets>
+      - TOKEN format(decoded): `<token-id>.<token-secret>`
+        - Example: `./help/bootstrap-token-secret-base64.yaml`
+      - curl -X GET $APISERVER/api --header "Authorization: Bearer $TOKEN" --insecure
+
+- Generate token to bootstrap a new node:
+  - Doc.: <https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-token/>
+  - Example: `kubeadm token create 123465.qwe345tgiopas906 --dry-run --print-join-command --ttl 2h`
+  - Ensure that kubeadm, kubelet, and kubectl are installed
+
+- Auth Mechanisms:
+  - Node 
+    - Node Authorization
+  - ABAC 
+    - Attribute-Based Authorization
+  - RBAC 
+    - Role-Based Authorization
+  - Webhook
