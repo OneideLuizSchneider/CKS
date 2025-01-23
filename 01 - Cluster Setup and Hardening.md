@@ -45,3 +45,15 @@
   - RBAC 
     - Role-Based Authorization
   - Webhook
+
+- Kubectl set credentials with a SA Token:
+  - kubectl get secret jose-secret -o jsonpath='{.data.token}' | base64 --decode
+  - kubectl config view -o jsonpath='{.clusters[*].name}'
+  - kubectl config set-credentials jose --token=$TOKEN
+  - kubectl config set-context jose-context --cluster=kubernetes --namespace=default --user=jose
+  - kubectl config use-context jose-contex
+
+- Kubectl Proxy
+  - `kubectl proxy`
+  - `kubectl port-forward pod/nginx 8080:80`
+  - `kubectl port-forward deployment/nginx 8080:80`
