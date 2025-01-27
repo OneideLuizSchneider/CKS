@@ -1,11 +1,11 @@
 # Certified Kubernetes Security Specialist (CKS) Exam Tips and beyond
 
-Helpful tips to achieve CKA certification.
+Helpful tips to achieve CKS certification.
 
 ## Resources I used for the Exam Preparation
 
 - Kubernetes [Official Documentation](https://kubernetes.io/docs/home/), for sure!
-- Killer Shell [CKA Exam Simulator](https://killer.sh/cks)
+- Killer Shell [CKS Exam Simulator](https://killer.sh/cks)
 - ...and the most important:
   - Repeat, Repeat and Repeat...
 
