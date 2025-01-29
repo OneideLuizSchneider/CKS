@@ -50,3 +50,18 @@ useradd -d /opt/roger -s /bin/bash -G admin -u 2328 roger
 - Look for ports on services:
   - `netstat -natp  | grep 9090`
   - `cat /etc/services | grep –w 53` 
+
+##### Firewall UFW
+
+- Install UFW:
+
+```
+apt-get install ufw
+systemctl enable ufw
+systemctl start ufw
+```
+
+- Allow a port:
+  - `ufw allow 22`
+  - Range to 9090:
+  - `ufw allow from 135.22.65.0/24 to any port 9090 proto tcp`
