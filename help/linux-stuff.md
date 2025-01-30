@@ -65,3 +65,9 @@ systemctl start ufw
   - `ufw allow 22`
   - Range to 9090:
   - `ufw allow from 135.22.65.0/24 to any port 9090 proto tcp`
+
+
+##### Syscalls
+
+- strace
+  - `strace -c touch /tmp/error.log`
