@@ -71,3 +71,5 @@ systemctl start ufw
 
 - strace
   - `strace -c touch /tmp/error.log`
+  - `strace -c ls /root`
+  - `strace -c ls -l`
