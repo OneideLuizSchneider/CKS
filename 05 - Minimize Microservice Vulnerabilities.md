@@ -34,4 +34,27 @@
         - `ps -ef | grep kube-apiserver | grep admission-plugins`
   - Enable by default(k8s 1.32):
     - `CertificateApproval, CertificateSigning, CertificateSubjectRestriction, DefaultIngressClass, DefaultStorageClass, DefaultTolerationSeconds, LimitRanger, MutatingAdmissionWebhook, NamespaceLifecycle, PersistentVolumeClaimResize, PodSecurity, Priority, ResourceQuota, RuntimeClass, ServiceAccount, StorageObjectInUseProtection, TaintNodesByCondition, ValidatingAdmissionPolicy, ValidatingAdmissionWebhook`
-    
+
+
+- Pod Security
+  - Pod Security Admission (PSA)
+    - <https://kubernetes.io/docs/concepts/security/pod-security-admission/>
+  - Pod Security Standards (PSS).
+    - <https://kubernetes.io/docs/concepts/security/pod-security-standards/>
+  
+  - PSA is enable by default, to check it:
+    - ```
+      kubectl exec -n kube-system kube-apiserver-controlplane \
+        -- kube-apiserver -h | grep enable-admission`
+      ```
+  - PS NS level:
+    - Label: `pod-security.kubernetes.io/<MODE>: <LEVEL>`
+      - Mode:
+        - `enforce`
+        - `audit`
+        - `warn`
+      - LevelL
+        - `Privileged`
+        - `Baseline`
+        - `Restricted`
+
