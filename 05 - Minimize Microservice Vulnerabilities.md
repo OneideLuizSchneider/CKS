@@ -58,3 +58,8 @@
         - `Baseline`
         - `Restricted`
 
+  - Other alternatives for enforcing policies are being developed in the Kubernetes ecosystem, such as:
+    - Kubewarden
+    - Kyverno
+    - OPA Gatekeeper
+      - <https://open-policy-agent.github.io/gatekeeper/website/docs/howto/>
