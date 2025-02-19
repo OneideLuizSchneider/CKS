@@ -12,6 +12,10 @@ helm repo add cilium https://helm.cilium.io/
 helm upgrade --install cilium cilium/cilium --version 1.16.6 \
   --set operator.replicas=1 \
   --namespace kube-system
+
+  # --set encryption.type=wireguard
+  # https://docs.cilium.io/en/stable/security/network/encryption/
+  # https://docs.cilium.io/en/stable/security/network/encryption-wireguard/
 ```
 
 Uninstall:
