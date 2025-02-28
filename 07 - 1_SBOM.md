@@ -18,6 +18,10 @@
   - Quick responses to security threats.
 
 - Tools:
+  - For the test focus on BOM <https://github.com/kubernetes-sigs/bom>:
+    ```
+    bom generate --output=nginx.spdx --image registry.k8s.io/kube-apiserver:v1.21.0
+    ```
   - Syft <https://github.com/anchore/syft>
     - `curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin`
     - `syft --version`

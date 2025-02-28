@@ -28,7 +28,7 @@
 - Admission Controller
   - Doc: <https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/>
   - API Server flag:
-    - Enable: `kube-apiserver --enable-admission-plugins=NamespaceLifecycle,LimitRanger ...`
+    - Enable: `kube-apiserver --enable-admission-plugins=NamespaceLifecycle,LimitRanger,ImagePolicyWebhook ...`
     - Disable: `kube-apiserver --disable-admission-plugins=PodNodeSelector,AlwaysDeny ...`
       - To check it:
         - `ps -ef | grep kube-apiserver | grep admission-plugins`
